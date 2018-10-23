@@ -1,0 +1,21 @@
+{
+  "name": "opsdash-server",
+  "version": "1.0.0",
+  "description": "This is a wrapper for opsdash server. You can configure and maintain opsdash server instances via docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "opsdash",
+    "server",
+    "monitoring",
+    "docker",
+    "docker-compose"
+  ],
+  "author": "Stefan Neidig",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
