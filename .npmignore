@@ -1,0 +1,7 @@
+yarn.lock
+.idea
+test
+*.log
+.gitignore
+docs
+node_modules
