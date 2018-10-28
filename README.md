@@ -42,6 +42,10 @@ Commands:
   help [cmd]        display help for [cmd]
 ```
 
+## Related work
+
+* [https://github.com/pdaether/opsdash-docker](https://github.com/pdaether/opsdash-docker)
+
 ## License
 
 Copyright (c) 2018, appcom interactive GmbH
