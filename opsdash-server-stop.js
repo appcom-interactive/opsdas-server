@@ -8,6 +8,7 @@ const chalk = require('chalk');
 const compose = require('docker-compose');
 
 program
+  .option('-v, --verbose', 'Enable verbose output')
   .parse(process.argv);
 
 const { args } = program;
@@ -22,7 +23,7 @@ mkdirp(destination);
 
 const options = {
   cwd: destination,
-  log: true
+  log: program.verbose
 };
 
 console.log('Building and running opsdash server');

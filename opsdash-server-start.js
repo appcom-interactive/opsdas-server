@@ -9,6 +9,7 @@ const chalk = require('chalk');
 const compose = require('docker-compose');
 
 program
+  .option('-v, --verbose', 'Enable verbose output')
   .parse(process.argv);
 
 const { args } = program;
@@ -30,7 +31,7 @@ if (!fs.existsSync(path.join(destination, 'docker-compose.yml'))) {
 
 const options = {
   cwd: destination,
-  log: true
+  log: program.verbose
 };
 
 console.log('Stopping opsdash server');
