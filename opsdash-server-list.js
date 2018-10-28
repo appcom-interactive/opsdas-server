@@ -6,6 +6,7 @@ const path = require('path');
 const os = require('os');
 const logger = require('./logger');
 const chalk = require('chalk');
+const Dockerode = require('dockerode');
 
 program
   .parse(process.argv);
@@ -19,7 +20,15 @@ const profiles = fs.readdirSync(destination)
 
 if (profiles.length > 0) {
   logger.info('Found the following opsdash server profiles:\n');
-  profiles.forEach(profile => logger.info(`* ${chalk.blue(profile)}`));
+  profiles
+    .sort()
+    .forEach(async (profile) => {
+      const status = ((await new Dockerode().listContainers())
+        .filter(container => container.Names.some(name => name === `/opsdash-server-${profile}`))[0] || { State: 'not running' })
+        .State;
+
+      logger.info(`* ${chalk.blue(profile)} (${status})`);
+    });
 } else {
   logger.info('There are no profiles yet. Create on using the start command');
 }
