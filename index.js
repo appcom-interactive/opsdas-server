@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const path = require('path');
+const os = require('os');
+const mkdirp = require('mkdirp');
+
 const { description, version } = require('./package.json');
+
+const destination = path.join(os.homedir(), '.opsdash-server');
+mkdirp(destination);
 
 program
   .version(version)
