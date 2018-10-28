@@ -16,9 +16,7 @@ The following software must be installed
 
 You can install opsdash-server with the following command
 
-```
-npm i -g opsdash-server
-```
+    npm i -g opsdash-server
   
 ## CLI
 
@@ -27,20 +25,19 @@ an optional `name` parameter, to use a names OpsDash server instance. If `name` 
 
 With the `list` command you can show all OpsDash server profiles and their current status.
 
-```
-Usage: opsdash-server [options] [command]
+    Usage: opsdash-server [options] [command]
+    
+    Options:
+      -V, --version     output the version number
+      -h, --help        output usage information
+    
+    Commands:
+      start [name]      start the OpsDash server
+      stop [name]       stop the OpsDash server
+      configure [name]  configures the OpsDash server
+      list              lists all profiles
+      help [cmd]        display help for [cmd]
 
-Options:
-  -V, --version     output the version number
-  -h, --help        output usage information
-
-Commands:
-  start [name]      start the OpsDash server
-  stop [name]       stop the OpsDash server
-  configure [name]  configures the OpsDash server
-  list              lists all profiles
-  help [cmd]        display help for [cmd]
-```
 
 ## Related work
 
@@ -48,16 +45,18 @@ Commands:
 
 ## License
 
-Copyright (c) 2018, appcom interactive GmbH
+    ISC License
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
-SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
-OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
-CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+    Copyright (c) 2018, appcom interactive GmbH
+    
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+    
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+    SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+    OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+    CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
